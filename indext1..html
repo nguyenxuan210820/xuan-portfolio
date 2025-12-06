@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio Xuân</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f7f7f7;
+            color: #333;
+        }
+
+        /* HEADER */
+        header {
+            background: #2c3e50;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: #9ed0ff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        /* HERO SECTION */
+        #hero {
+            padding: 60px;
+            text-align: center;
+            background: #eaf2f8;
+        }
+
+        #hero img {
+            width: 180px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        /* SECTION */
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        /* SKILLS */
+        .skills-list {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .skill-item {
+            background: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+            min-width: 120px;
+        }
+
+        /* PROJECTS */
+        .project-card {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* CONTACT */
+        .contact-box {
+            background: white;
+            max-width: 350px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #2c3e50;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Portfolio - Xuân</h1>
+    <nav>
+        <a href="#hero">Trang chủ</a>
+        <a href="#about">Giới thiệu</a>
+        <a href="#skills">Kỹ năng</a>
+        <a href="#projects">Dự án</a>
+        <a href="#contact">Liên hệ</a>
+    </nav>
+</header>
+
+<section id="hero">
+    <img src="https://picsum.photos/200" alt="avatar">
+    <h2>Xin chào, mình là <span style="color:#3498db;">Xuân</span></h2>
+    <p>Frontend Developer • HTML • CSS • JavaScript</p>
+</section>
+
+<section id="about">
+    <h2>Giới thiệu</h2>
+    <p>Mình là lập trình viên Frontend mới bắt đầu học nhưng rất đam mê.  
+       Mình đang luyện HTML, CSS, JavaScript và muốn trở thành Frontend Developer chuyên nghiệp.</p>
+</section>
+
+<section id="skills">
+    <h2>Kỹ năng</h2>
+    <div class="skills-list">
+        <div class="skill-item">HTML</div>
+        <div class="skill-item">CSS</div>
+        <div class="skill-item">JavaScript</div>
+        <div class="skill-item">Responsive Web</div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Dự án</h2>
+
+    <div class="project-card">
+        <h3>📌 Dự án 1 – Website giới thiệu</h3>
+        <p>Trang web giới thiệu bản thân với bố cục đơn giản.</p>
+    </div>
+
+    <div class="project-card">
+        <h3>📌 Dự án 2 – App bấm nút</h3>
+        <button 
+            onclick="showMessage()" 
+            style="padding:10px 20px; cursor:pointer;">
+            Bấm vào đây
+        </button>
+        <p id="result" style="font-size:18px; color:blue; margin-top:10px;"></p>
+    </div>
+    <div class="project-card">
+    <h3>📌 Dự án 3 – Máy tính đơn giản</h3>
+
+    <input id="num1" type="number" placeholder="Số 1" style="padding:5px; width:120px;">
+    <input id="num2" type="number" placeholder="Số 2" style="padding:5px; width:120px;">
+
+    <br><br>
+
+    <button onclick="calc('+')">+</button>
+    <button onclick="calc('-')">−</button>
+    <button onclick="calc('*')">*</button>
+    <button onclick="calc('/')">/</button>
+
+    <p id="calc-result" style="font-size:18px; color:blue; margin-top:10px;"></p>
+</div>
+ <div class="project-card">
+    <h3>📌 Dự án 4 – App đổi màu nền</h3>
+
+    <button onclick="changeColor()" style="padding:10px 20px;">Đổi màu</button>
+
+    <p id="color-text" style="margin-top:10px; font-size:16px;"></p>
+</div>
+
+</section>
+
+<section id="contact">
+    <h2>Liên hệ</h2>
+    <div class="contact-box">
+        <p>Email: xuan@example.com</p>
+        <p>Zalo: 0123 456 789</p>
+        <p>TP. Hồ Chí Minh</p>
+    </div>
+</section>
+
+<footer>
+    © 2025 - Portfolio Xuân
+</footer>
+
+<script>
+    function showMessage() {
+        document.getElementById("result").textContent = "Xin chào Xuân! Bạn đã bấm nút 🎉";
+    }
+</script>
+
+</body>
+</html>
